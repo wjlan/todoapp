@@ -10,15 +10,16 @@ import java.util.List;
 @Service
 public class TodoServiceImpl implements TodoService {
     @Resource
-    private TodoRepository todoRepository;
+    private TodoRepository
+            todoRepository;
     @Override
     public List<Todo> getAllTodos() {
-        return List.of();
+        return todoRepository.findAll();
     }
 
     @Override
     public Todo createTodo(Todo todo) {
-        return null;
+        return todoRepository.save(todo);
     }
 
     @Override
