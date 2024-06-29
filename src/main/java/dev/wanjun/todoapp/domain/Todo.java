@@ -29,7 +29,7 @@ public class Todo {
         this.title = title;
     }
 
-    public boolean isCompleted() {
+    public boolean getCompleted() {
         return completed;
     }
 
